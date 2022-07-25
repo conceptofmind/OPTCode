@@ -28,11 +28,3 @@ Developer updates can be found on:
 
 ### Citations:
 
-```bibtex
-@article{bian2021colossal,
-  title={Colossal-AI: A Unified Deep Learning System For Large-Scale Parallel Training},
-  author={Bian, Zhengda and Liu, Hongxin and Wang, Boxiang and Huang, Haichen and Li, Yongbin and Wang, Chuanrui and Cui, Fan and You, Yang},
-  journal={arXiv preprint arXiv:2110.14883},
-  year={2021}
-}
-```
