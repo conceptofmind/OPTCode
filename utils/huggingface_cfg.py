@@ -74,7 +74,7 @@ class CFG:
     )
 
     tokenizer_name: Optional[str] = field(
-        default="bigscience/bloom-1b3",
+        default="facebook/opt-1.3b",
         metadata={"help": "Tokenizer name."}
     )
 

@@ -3,7 +3,7 @@ from itertools import chain
 from datasets import load_dataset
 from torch.utils.data import DataLoader, DistributedSampler
 from torch.distributed import get_world_size
-from transformers import BloomTokenizerFast, default_data_collator
+from transformers import GPT2Tokenizer, default_data_collator
 from .huggingface_cfg import CFG
 
 def build_dataloaders(cfg: CFG):
@@ -29,7 +29,7 @@ def build_dataloaders(cfg: CFG):
     # Shuffle the validation input files.
     shuffled_eval_files = load_eval_data.shuffle(seed = cfg.seed)
 
-    tokenizer = BloomTokenizerFast.from_pretrained(cfg.tokenizer_name)
+    tokenizer = GPT2Tokenizer.from_pretrained(cfg.tokenizer_name)
 
     """
     A sequence length of x is used for the model. Input examples are concatenated

@@ -7,11 +7,11 @@ from colossalai.zero.init_ctx import ZeroInitContext
 from colossalai.nn.optimizer import HybridAdam
 
 from utils.build_dataloader import build_dataloaders
-from utils.hugging_face_cfg import CFG
+from utils.huggingface_cfg import CFG
 
 from transformers import OPTForCausalLM
 
-def OPTCode():
+def OPTCode(cfg: CFG):
 
     colossalai.launch_from_torch(config='./utils/colossalai_config.py')
 
@@ -28,10 +28,10 @@ def OPTCode():
             shard_strategy = gpc.config.zero.model_config.shard_strategy,
             shard_param = True
         ):
-            model = OPTForCausalLM.from_pretrained("facebook/opt-1.3")
+            model = OPTForCausalLM.from_pretrained("facebook/opt-1.3b")
             model.gradient_checkpointing_enable()
     else:
-        model = OPTForCausalLM.from_pretrained("facebook/bloom-1.3")
+        model = OPTForCausalLM.from_pretrained("facebook/bloom-1.3b")
 
     # build dataloaders
     train_dataloader, eval_dataloader = build_dataloaders(cfg)
@@ -78,3 +78,5 @@ def OPTCode():
 
             #         output = model(**batch)
             #     eval_loss = output.loss
+
+OPTCode(CFG())

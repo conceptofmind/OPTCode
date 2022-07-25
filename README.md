@@ -28,3 +28,11 @@ Developer updates can be found on:
 
 ### Citations:
 
+@misc{zhang2022opt,
+      title={OPT: Open Pre-trained Transformer Language Models}, 
+      author={Susan Zhang and Stephen Roller and Naman Goyal and Mikel Artetxe and Moya Chen and Shuohui Chen and Christopher Dewan and Mona Diab and Xian Li and Xi Victoria Lin and Todor Mihaylov and Myle Ott and Sam Shleifer and Kurt Shuster and Daniel Simig and Punit Singh Koura and Anjali Sridhar and Tianlu Wang and Luke Zettlemoyer},
+      year={2022},
+      eprint={2205.01068},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
