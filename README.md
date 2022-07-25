@@ -3,7 +3,7 @@ A scalable training implementation utilizing the OPT model for code generation.
 
 ### Usage
 ```bash
-$ git clone https://github.com/conceptofmind/BloomCoder.git
+$ git clone https://github.com/conceptofmind/OPTCode.git
 $ cd OPTCode
 $ colossalai run --nproc_per_node 1 train.py --use_trainer
 ```
